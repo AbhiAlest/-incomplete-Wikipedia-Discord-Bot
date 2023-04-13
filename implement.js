@@ -64,10 +64,10 @@ const factLoop = async () => {
             const pageText = await getPageText(article);
             facts.push(...getFunFacts(pageText));
         }
-        const channel = client.channels.cache.get('YOUR_CHANNEL_ID'); // replace YOUR_CHANNEL_ID with your channel ID
+        const channel = client.channels.cache.get('DISCORD_CHANNEL_ID'); 
         const fact = facts[Math.floor(Math.random() * facts.length)];
         channel.send(fact);
-        await new Promise((resolve) => setTimeout(resolve, 1200000)); // 20 minutes
+        await new Promise((resolve) => setTimeout(resolve, 1200000)); 
     }
 };
 
